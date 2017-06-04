@@ -1,0 +1,22 @@
+<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
+	<div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <%= link_to "Mariachi Mi Ciudad PV", '/', id: "logo", class: "navbar-brand" %>
+	  </div>
+	  <nav id="navbar" class="navbar-collapse collapse">
+	    <ul class="nav navbar-nav navbar-right">
+	      <li><a class="col-sm-6 icons" href="https://www.facebook.com/MariachiMiCiudadPV/?fref=ts" target="_blank">Fotos</a></li>
+	      <li><a class="col-sm-6 icons" href="https://www.youtube.com/user/elgordian" target="_blank">Vídeos</a></li>
+	      <li><%= link_to "Cotizaciones", '/quotations/new' %></li>
+	      <li><%= link_to "Integrantes", '/members' %></li>
+	      <li><%= link_to "Login", '/login' %></li>
+	    </ul>
+	  </nav>
+	</div>
+</header>

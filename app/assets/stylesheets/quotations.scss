@@ -1,0 +1,123 @@
+// Place all the styles related to the quotations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin hr-style {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #E0E0E0;
+}
+
+/* QUOTATION NEW */
+.quotation-container {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  .quotation-title {
+    margin: 40px 20px;
+    font-size: 50px;
+  }
+  .quotation {
+    margin-top: 2.5%;
+  }
+}
+
+.form-label {
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
+
+.quotation .form-control:focus {
+  border-color: rgba(51, 51, 51, 0.52);
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary:active,
+.btn.btn-primary:focus {
+  background-color: #333333;
+}
+
+/* Quotation Index */
+.list-container {
+  margin: 5%;
+  margin-top: 55px;
+  hr {
+    @include hr-style;
+  }
+  .list-title {
+    font-size: 40px;
+    margin: 2%;
+  }
+  .list {
+    text-decoration: none;
+    margin-top: 2%;
+    background-color: #F5F5DC;
+    padding: 0;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: .5px;
+    border-color: #333333;
+    color: #333333;
+    .client-name {
+      color: #F5F5F0;
+      margin: 0;
+      padding: 15px;
+      font-size: 30px;
+      text-align: center;
+      background-color: #333333;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      &:hover {
+        text-shadow: 2px 0 black, 0 2px black, 1px 0 black, 0 2px black;
+      }
+    }
+    .info {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .subtitle {
+      margin-top: 20px;
+    }
+    .description {
+      padding: 15px;
+      background-color: #D3D3D3;
+      border-radius: 5px;
+    }
+    &:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  }
+}
+
+/* Show */
+.client-container {
+  margin-top: 80px;
+  hr {
+    @include hr-style;
+  }
+  .client-title {
+    margin-bottom: 40px;
+  }
+  .personal {
+  	margin-bottom: 20px;
+  	// font-weight: bold;
+  }
+  .subtitle {
+		margin-bottom: 30px;
+		font-size: 25px;
+	}
+	.information {
+		padding: 5px 20px;
+		margin: 30px 0;
+		font-size: 15px;
+	}
+	.options {
+		margin: 60px 0;
+	}
+}
+
+	
+
+

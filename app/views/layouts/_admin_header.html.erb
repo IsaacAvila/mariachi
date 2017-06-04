@@ -1,0 +1,22 @@
+<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
+	<div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <div class="navbar-brand" id="logo">Mariachi Mi Ciudad PV</div>
+	  </div>
+	  <nav id="navbar" class="navbar-collapse collapse">
+	    <ul class="nav navbar-nav navbar-right">
+	      <li><%= link_to "Cotizaciones", '/quotations' %></li>
+	      <li><%= link_to "Eventos", '/events' %></li>
+	      <li><%= link_to "Fotos",   '#' %></li>
+	      <li><%= link_to "Videos",  '#' %></li>
+	      <li><%= link_to "Log out", logout_path, method: "delete", class: "log btn" %></li>
+	    </ul>
+	  </nav>
+	</div>
+</header>

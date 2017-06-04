@@ -1,0 +1,32 @@
+<%= render 'layouts/admin_header' %>
+<section class="client-container">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<h1 class="client-title col-sm-12"><%= @quotation.client %></h1>
+				<p class="personal col-sm-offset-2 col-sm-4">Email: <%= @quotation.email %></p>
+			  <p class="personal col-sm-4 offset-sm-2">Teléfono: <%= @quotation.phone %></p>
+			</div>
+			<hr>
+			<div class="location col-sm-6 text-justify">
+				<h3 class="subtitle text-center">Informacion del evento</h3>
+				<p class="information">El servicio es solicitado para el <b><%= @quotation.date.to_s(:rfc822) %></b> 
+			    a las <b><%= @quotation.time.to_s(:time) %> hrs</b> en la direccion <b><%= @quotation.address %></b> de la ciudad de 
+			    <b><%= @quotation.city %></b>
+			  </p>
+			</div>
+			<div class="quotation-descritpion col-sm-6 text-justify">
+				<h3 class="subtitle text-center">Descripcion del evento</h3>
+				<p class="information"><%= @quotation.description %></p>
+			</div>
+		</div>
+		<div class="row options">
+			<div class="col-sm-6">
+			  <%= link_to "Crear Evento", new_event_path, class: "btn btn-primary col-sm-offset-4 col-sm-4 offset-sm-4" %>
+			</div>
+			<div class="col-sm-6">
+				<%= link_to "Borrar Cotizacion", quotation_path, method: "delete", class: "btn btn-primary col-sm-offset-4 col-sm-4 offset-sm-4" %>
+			</div>
+		</div>
+	</div>
+</section>

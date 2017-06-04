@@ -1,0 +1,245 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin titles-index($top) {
+  padding-top: $top;
+  padding-bottom: 30px;
+  font-size: 50px;
+}
+
+@mixin icons-index {
+  text-decoration: none;
+  color: #333333;
+  i {
+    font-size: 60px;
+  }
+}
+
+@mixin background-fixed($url, $size) {
+  background: url($url);
+  min-height: $size; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* header */
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.6em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 14px;
+  font-weight: bold;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+
+/* INDEX */
+/* parallax */
+.parallax {
+  @include background-fixed("bgindex.png", 86%);
+}
+
+/* history */
+.history {
+  margin: 30px 30px 40px 30px;
+  h2 {
+    @include titles-index(15px);
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+/* contact */
+.contact {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  border-radius: 10px;
+  padding-bottom: 55px;
+  margin-bottom: 20px;
+  h2 {
+    @include titles-index(20px);
+    margin-bottom: 30px;
+  }
+  div {
+    @include icons-index;
+  }
+  a {
+    @include icons-index;
+  }
+}
+
+/* down arrows */
+.down-arrows {
+  margin-top: 15px;
+  a {
+    @include icons-index;
+  }
+}
+
+/* Members */
+/* member */
+.members{
+  padding-top: 60px;
+  hr {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E0E0E0;
+  }
+}
+
+.twice {
+  padding: 10px;
+  text-align: center;
+  .member {
+    padding: 20px;
+    &:hover {
+      background-color: #FFFFF0;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  }
+  .image-container {
+    text-align: center;
+    img {
+      display: inline;
+    }
+  }
+  .info-container {
+    text-align: center;
+    h5 {
+      margin-top: 50px;
+      font-size: 25px;
+    }
+    p {
+      margin-top: 40px;
+      font-size: 15px;
+    }
+  }
+}
+
+/*START*/
+.menu-container {
+  color: #EBEBEB;
+  .menu {
+    .item {
+      a {
+        color: #D6D6D6;
+        background-color: transparent;
+      }
+      &:hover {
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 5px;
+      }
+      &:active {
+        background-color: #D6D6D6;
+        a{
+          color: #333333;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (min-width: 320px) {
+  .contains {
+    @include background-fixed("bgstart.jpg", 100%);
+    background-position-x: 95%;
+  }
+  .menu-container {
+    .menu {
+      display: inline-block;
+      float: none;
+      vertical-align: top;
+      .item {
+        text-align: center;
+        a {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .contains {
+    @include background-fixed("bgstart.jpg", 100%);
+    background-position-y: 100%;
+  }
+  .menu-container {
+    margin-top: 14%;
+    .menu {
+      display: inline-block;
+      float: none;
+      vertical-align: top;
+      margin-left: 5%;
+      .item {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.row {
+  .log {
+    float: right;
+    text-decoration: none;
+    margin-top: 2.5%;
+    color: #EBEBEB;
+    &:hover {
+      text-decoration: none;
+      color: #EBEBEB;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 5px;
+      border-color: #D6D6D6;
+    }
+    &:active {
+      background-color: #D6D6D6;
+      a{
+        color: #333333;
+      }
+    }
+    &:focus {
+      color: #EBEBEB;
+    }
+  }
+}
+
+
+/* footer */
+.footer {
+  margin: 0;
+}
+
+.icons {
+  text-decoration: none;
+  color: #333333;
+  i {
+    font-size: 50px;
+  }
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+
+
+
+
+
+
+

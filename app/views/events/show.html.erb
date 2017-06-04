@@ -1,0 +1,28 @@
+<%= render 'layouts/admin_header' %>
+<section class="event-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h1 class="event-title col-sm-12"><%= @event.name %></h1>
+      </div>
+      <hr>
+      <div class="location-event">
+        <div class="col-sm-6 col-sm-offset-1 offset-sm-1 text-justify">
+          <h3 class="subtitle text-center col-sm-12">Informacion del evento</h3>
+          <p class="information-event col-sm-12">El servicio es solicitado para el <b><%= @event.date.to_s(:rfc822) %></b> 
+            a las <b><%= @event.time.to_s(:time) %> hrs</b> en la direccion <b><%= @event.address %></b> de la ciudad de 
+            <b><%= @event.city %></b>
+          </p>
+        </div>
+        <div class="col-sm-4">
+          <div class="col-sm-12">
+            <%= link_to "Modificar", edit_event_path, class: "btn btn-primary col-sm-offset-3 col-sm-6 offset-sm-3" %>
+          </div>
+          <div class="col-sm-12">
+            <%= link_to "Borrar Evento", event_path, method: "delete", class: "btn btn-primary col-sm-offset-3 col-sm-6 offset-sm-3" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

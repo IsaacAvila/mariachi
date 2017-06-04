@@ -1,0 +1,27 @@
+<%= render 'layouts/admin_header' %>
+<section class="list-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="list-title">Cotizaciones</h1>
+      </div> 
+      <hr>
+      <% @quotations.each do |quotation| %>
+        <%= link_to(quotation) do %>
+        <div class="list col-sm-4 col-sm-offset-1 offset-sm-1">
+          <h5 class="client-name col-sm-12"><%= quotation.client %></h5>
+          <div class="col-sm-12">
+            <p class="subtitle col-sm-12">Lugar: </p>
+            <p class="info col-sm-12">
+              <%= quotation.address %> en <%= quotation.city %> a las <%= quotation.time.to_s(:time) %> el dia <%= quotation.date.to_s(:short) %> 
+            </p>
+          </div>
+          <hr>
+          <p class="subtitle col-sm-8 col-sm-offset-2 offset-sm-2">Descripcion:</p>
+          <p class="description col-sm-8 col-sm-offset-2 offset-sm-2"><%= quotation.description %></p>
+        </div>
+				<% end %>
+      <% end %>
+    </div>
+  </div>
+</section>

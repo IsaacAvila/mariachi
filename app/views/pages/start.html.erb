@@ -1,0 +1,16 @@
+<section class="contains">
+  <div class="container">
+  	<div class="row">
+  		<%= link_to "Log out", logout_path, method: "delete", class: "log btn" %>
+  	</div>
+	  <div class="row text-center menu-container">
+	  	<h1 class="title-menu col-sm-8">Mariachi Mi Ciudad PV</h1>
+	    <ul class="nav nav-pills col-sm-8 menu">
+			  <li role="presentation" class="item"><%= link_to "Cotizaciones", '/quotations' %></li>
+			  <li role="presentation" class="item"><%= link_to "Eventos", '/events' %></li>
+			  <li role="presentation" class="item"><a href="#">Fotos</a></li>
+			  <li role="presentation" class="item"><a href="#">Videos</a></li>
+			</ul>
+	  </div>
+  </div>
+</section>

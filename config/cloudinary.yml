@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dmcsxvfaq
+  api_key: '267697135916122'
+  api_secret: egWnW7cUgZ_4JqtpWS3_GY3I1Q0
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dmcsxvfaq
+  api_key: '267697135916122'
+  api_secret: egWnW7cUgZ_4JqtpWS3_GY3I1Q0
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dmcsxvfaq
+  api_key: '267697135916122'
+  api_secret: egWnW7cUgZ_4JqtpWS3_GY3I1Q0
+  enhance_image_tag: true
+  static_image_support: false

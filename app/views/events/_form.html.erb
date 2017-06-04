@@ -1,0 +1,37 @@
+<section class="quotation-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 header">
+        <h1 class="quotation-title">Cotizaciones</h1>
+      </div>
+      <hr>
+      <div class="col-sm-6 offset-sm-6 quotation">
+        <%= form_for(@event) do |f| %>
+          <div class="form-group">
+            <%= f.label "Nombre", class: 'form-label' %>
+            <%= f.text_field :name, class: 'form-control' %>
+            
+            <%= f.label "Direccion", class: 'form-label' %>
+            <%= f.text_field :address , class: 'form-control' %>
+            
+            <%= f.label "Ciudad", class: 'form-label' %>
+            <%= f.text_field :city , class: 'form-control' %>
+            
+            <%= f.label "Fecha", class: 'form-label' %>
+            <%= f.date_field :date, value: Date.today, class: 'form-control', min: Date.today %>
+            
+            <%= f.label "Hora", class: 'form-label' %>
+            <%= f.time_field :time, value: "12:00", class: 'form-control' %>
+            
+            <%= f.label "Cliente", class: 'form-label' %>
+            <%= f.select :quotation, @quotations, include_blank: true %>
+            
+            <%= f.label "Usuario", class: 'form-label' %>
+            <%= f.select :user, @users, include_blank: true %>
+          </div>
+          <%= f.submit "Enviar", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+<section class="login">
+	<div class="container">
+	  <div class="card text-center">
+	  	<h1>
+	  	  Log In
+	  	  <%= image_tag("guitarra.png", class: "image") %>
+	  	</h1>
+	    <div class="form-signin">
+	    	<%= form_for(:session, url: login_path) do |f| %> 
+		      <%= f.email_field :email, :placeholder => "Email address", class: "form-control", id: "inputEmail" %> 
+		      <%= f.password_field :password, :placeholder => "Password", class: "form-control", id: "inputPassword"%> 
+		      <%= f.submit "Log in", class: "btn btn-primary btn-lg btn-block btn-signin" %>
+		    <% end %>
+	    </div>
+	  </div>
+	</div>
+</section>
+<%= render 'pages/footer' %>
